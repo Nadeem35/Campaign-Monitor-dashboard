@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="Assets/CSS/style.css">
+    <link rel="stylesheet" href="Assets/CSS/media.css">
+
+
+</head>
+
+<body>
+    <div class="topbar">
+        <div class="hamburger" data-toggle="collapse" data-target="#sidebar-collapse">
+            <i class="fa fa-bars"></i>
+        </div>
+        <div class="dash-logo">
+            <!-- <img src="Assets/img/logoofsmile.png" alt="Company Logo"> -->
+            <h3>Marketing</h3>
+            <!-- Replace with your logo URL -->
+        </div>
+
+
+        <div class="profile-section">
+            <div class="dropdown d-inlie">
+                <img src="Assets/img/businessman.png" alt="Profile Image" class="img-circle" id="profileDropdown" data-toggle="dropdown">
+                <span class="text-light ml-2" data-toggle="dropdown">My Account
+                    <span class="fa fa-caret-down"></span>
+                </span>
+                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="profileDropdown">
+                    <li><a href="#"><i class="fa fa-cog"></i> Setting</a></li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="login.html"> <i class="fa-solid fa-right-to-bracket"></i> Login</a>
+                    </li>
+                    <li class="divider"> </li>
+                    <li>
+                        <a href="#"> <i class="fa fa-sign-out"></i> Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="sidebar-collapse" class="sidebar">
+        <a href="index.html"><i class="fa fa-home"></i> Dashboard</a>
+        <a href="add_agent.html"><i class="fa fa-user-plus"></i> Add Agent</a>
+        <a href="list_agent.html" class="active"><i class="fa fa-users"></i> List Agent</a>
+        <a href="campaign.html"><i class="fa fa-bullhorn"></i> Campaign</a>
+        <a href="Add_campaign.html"> <i class="fas fa-broadcast-tower"></i> Add Campaign</a>
+    </div>
+
+
+
+
+
+    <div id="table_dashboard" class="mrgntop mrgnleft">
+        <div class="container-fluid">
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="dashboard_box table-responsive table-scroll">
+
+                        <div class="head d-flex float-right">
+                            <h4 id="heading">List AGENT </h4>
+                            <button class="btn btn-primary" onclick="showPopup()">
+                                <a href="add_agent.html" style="color: #fff; text-decoration: none;">
+                                    <i class="fa fa-plus-circle"></i>&nbsp; Add Agent
+                                </a>
+                            </button>
+                        </div>
+
+                        <!-- +++++++++++++++++++++ -->
+                        <table class="table table-striped bg-white p-2">
+                            <thead class="thead-dark" style="background-color: #5289CA; color: #fff;">
+                                <tr>
+                                    <th scope="col">S.N.</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">Password</th>
+                                    <th scope="col">Phone No.</th>
+                                    <th scope="col">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                    <td>4661321531</td>
+                                    <td class="crud">
+                                        <span class="edits">
+                                            <a href="agent.html">Edit <i class="fa-solid fa-pen-to-square"></i></a>
+                                        </span>
+                                        <span class="del">
+                                            <a href="#"> Delete<i class="fa-solid fa-trash-can"></i></a>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                    <td>9546541313</td>
+                                    <td class="crud">
+                                        <span class="edits">
+                                            <a href="agent.html">Edit <i class="fa-solid fa-pen-to-square"></i></a>
+                                        </span>
+                                        <span class="del">
+                                            <a href="#"> Delete<i class="fa-solid fa-trash-can"></i></a>
+                                        </span>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>Larry</td>
+                                    <td>the Bird</td>
+                                    <td>@twitter</td>
+                                    <td>8465313135</td>
+                                    <td class="crud">
+                                        <span class="edits">
+                                            <a href="agent.html">Edit <i class="fa-solid fa-pen-to-square"></i></a>
+                                        </span>
+                                        <span class="del">
+                                            <a href="#"> Delete<i class="fa-solid fa-trash-can"></i></a>
+                                        </span>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <th scope="row">4</th>
+                                    <td>Larry</td>
+                                    <td>the Bird</td>
+                                    <td>@twitter</td>
+                                    <td>8465313135</td>
+                                    <td class="crud">
+                                        <span class="edits">
+                                            <a href="agent.html">Edit <i class="fa-solid fa-pen-to-square"></i></a>
+                                        </span>
+                                        <span class="del">
+                                            <a href="#"> Delete<i class="fa-solid fa-trash-can"></i></a>
+                                        </span>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <th scope="row">5</th>
+                                    <td>Larry</td>
+                                    <td>the Bird</td>
+                                    <td>@twitter</td>
+                                    <td>8465313135</td>
+                                    <td class="crud">
+                                        <span class="edits">
+                                            <a href="agent.html">Edit <i class="fa-solid fa-pen-to-square"></i></a>
+                                        </span>
+                                        <span class="del">
+                                            <a href="#"> Delete<i class="fa-solid fa-trash-can"></i></a>
+                                        </span>
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- +++++++++++++++++++++ -->
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <!-- ++++++++++ Popup  +++++++++++++ -->
+
+    <!-- <div class="popup-form" id="popupForm">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <h4>Update Data</h4>
+        <input type="text" placeholder="Name">
+        <input type="email" placeholder="Email">
+        <input type="text" placeholder="Phone No.">
+        <input type="email" placeholder="Email">
+        <input type="text" placeholder="Country">
+        <button onclick="saveData()">Save</button>
+    </div> -->
+
+    <!-- +++++++++++++++++++++++ -->
+
+
+
+
+
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="Assets/JS/script.js"></script>
+
+
+</body>
+
+</html>

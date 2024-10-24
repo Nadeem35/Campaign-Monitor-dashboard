@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="Assets/CSS/style.css">
+    <link rel="stylesheet" href="Assets/CSS/media.css">
+
+</head>
+
+
+
+<body>
+
+
+    <div class="topbar">
+        <div class="hamburger" data-toggle="collapse" data-target="#sidebar-collapse">
+            <i class="fa fa-bars"></i>
+        </div>
+        <div class="dash-logo">
+            <!-- <img src="Assets/img/logoofsmile.png" alt="Company Logo"> -->
+            <h3>Marketing</h3>
+            <!-- Replace with your logo URL -->
+        </div>
+
+
+        <div class="profile-section">
+            <div class="dropdown d-inlie">
+                <img src="Assets/img/businessman.png" alt="Profile Image" class="img-circle" id="profileDropdown"
+                    data-toggle="dropdown">
+                <span class="text-light ml-2" data-toggle="dropdown">My Account
+                    <span class="fa fa-caret-down"></span>
+                </span>
+                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="profileDropdown">
+                    <li><a href="#"><i class="fa fa-cog"></i> Setting</a></li>
+                    <li class="divider"> </li>
+                    <li>
+                        <a href="login.html"> <i class="fa-solid fa-right-to-bracket"></i> Login</a>
+                    </li>
+                    <li class="divider"> </li>
+                    <li>
+                        <a href="#"> <i class="fa fa-sign-out"></i> Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <!-- <div class="dropdown profile-info">
+            <img src="Assets/img/businessman.png" alt="Profile Picture">
+            <span>My Account</span>
+            <button class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <span class="fa fa-caret-down"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
+                <li><a href="#"><i class="fa fa-sign-out"></i> Logout</a></li>
+            </ul>
+        </div> -->
+
+
+
+    </div>
+
+
+    <div id="sidebar-collapse" class="sidebar">
+        <a href="index.html" class="active"><i class="fa fa-home"></i> Dashboard</a>
+        <a href="add_agent.html"><i class="fa fa-user-plus"></i> Add Agent</a>
+        <a href="list_agent.html"><i class="fa fa-users"></i> List Agent</a>
+        <a href="campaign.html"><i class="fa fa-bullhorn"></i> Campaign</a>
+        <a href="Add_campaign.html"> <i class="fas fa-broadcast-tower"></i> Add Campaign</a>
+    </div>
+
+
+    <!-- <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="card-container">
+
+                    <div class="col-sm-4">
+                        <div class="card" style="background-image: url(./Assets/img/download.svg); color: #fff;">
+                            <div class="icons">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h4>Agents</h4>
+                            <p>Visited Users: <span id="card1-users">123</span></p>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="card" style="background-image: url(./Assets/img/pattern-1.jpg); color: #fff;">
+                            <i class="fa fa-bullhorn"></i>
+                            <h4>Active Campaigns</h4>
+                            <p>Visited Users: <span id="card2-users">456</span></p>
+                        </div>
+
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <i class="fa fa-tasks"></i>
+                            <h4>Total Campaigns</h4>
+                            <p>Visited Users: <span id="card3-users">789</span></p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+
+    <!-- <div class="cards-container"> -->
+
+
+    <div class="content">
+        <div class="container-fluid">
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card agent">
+                        <i class="fas fa-user icon"></i>
+                        <h2>Agents</h2>
+                        <!-- <h2> 654</h2> -->
+                        <div class="number" data-target="5230">0</div>
+                        <!-- <h3> 112</h3> -->
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card campaigns">
+                        <i class="fas fa-bullhorn icon" style="color: #fff;"></i>
+                        <h2>Campaigns</h2>
+                        <div class="number" data-target="525">0</div>
+                        <!-- <h2> 541</h2> -->
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card total-campaigns">
+                        <i class="fas fa-chart-pie icon"></i>
+                        <h2>Total Campaigns</h2>
+                        <div class="number" data-target="2135">0</div>
+                        <!-- <h2> 124</h2> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- </div> -->
+
+    <div id="table_dashboard" class="mrgnleft">
+        <div class="container-fluid">
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="dashboard_box table-responsive table-scroll">
+                        <h4 id="heading">Recent Agent</h4>
+
+                        <!-- +++++++++++++++++++++ -->
+
+                        <table class="table table-striped bg-white p-2">
+                            <thead class="thead-dark" style="background-color: #5289CA; color: #fff;">
+                                <tr>
+                                    <th scope="col">S.N.</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">Password</th>
+                                    <th scope="col">Recovery Email</th>
+                                    <th scope="col">Phone No.</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>abc@gmail.com</td>
+                                    <td>Password</td>
+                                    <td>xyz@gmail.com</td>
+                                    <td>4661321531</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>abc@gmail.com</td>
+                                    <td>Password</td>
+                                    <td>xyz@gmail.com</td>
+                                    <td>9546541313</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>abc@gmail.com</td>
+                                    <td>Password</td>
+                                    <td>xyz@gmail.com</td>
+                                    <td>8465313135</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- +++++++++++++++++++++ -->
+
+
+                    </div>
+                </div>
+
+
+                <div class="col-md-6">
+                    <div class="dashboard_box table-responsive table-scroll">
+                        <h4 id="heading">Recent Campaign</h4>
+
+                        <!-- +++++++++++++++++++++ -->
+
+                        <table class="table table-striped bg-white p-2">
+                            <thead class="thead-dark" style="background-color: #5289CA; color: #fff;">
+                                <tr>
+                                    <th scope="col">S.N.</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">Password</th>
+                                    <th scope="col">Recovery Email</th>
+                                    <th scope="col">Phone No.</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>abc@gmail.com</td>
+                                    <td>Password</td>
+                                    <td>xyz@gmail.com</td>
+                                    <td>8846564552</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>abc@gmail.com</td>
+                                    <td>Password</td>
+                                    <td>xyz@gmail.com</td>
+                                    <td>9755616565</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>abc@gmail.com</td>
+                                    <td>Password</td>
+                                    <td>xyz@gmail.com</td>
+                                    <td>9542135565</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+
+                        <!-- +++++++++++++++++++++ -->
+                    </div>
+                </div>
+
+
+
+
+
+
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="Assets/JS/script.js"></script>
+
+
+</body>
+
+</html>
